@@ -1,14 +1,17 @@
 # SPDX-License-Identifier: GPL-2.0-only
 #
-# Copyright (C) 2022-2024 ImmortalWrt.org
+# Copyright (C) 2022-2023 ImmortalWrt.org
 
 include $(TOPDIR)/rules.mk
 
 LUCI_TITLE:=The modern ImmortalWrt proxy platform for ARM64/AMD64
+LUCI_PKGARCH:=all
 LUCI_DEPENDS:= \
 	+sing-box \
 	+firewall4 \
 	+kmod-nft-tproxy
+
+PKG_NAME:=luci-app-homeproxy
 
 define Package/luci-app-homeproxy/conffiles
 /etc/config/homeproxy
